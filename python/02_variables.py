@@ -17,4 +17,4 @@ print ("Tipo de Edad de Anakin: ", type(edad_anakin))
 
 my_dog: str = "Fido"
 print("Mi perro se llama: ", my_dog)
-
+my_dog = 5

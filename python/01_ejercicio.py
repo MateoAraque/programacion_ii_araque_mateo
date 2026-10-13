@@ -1,6 +1,6 @@
 
 peso = float(input("Ingrese el peso del paquete en kilogramos: "))
-zona = int(input("Ingrese la zona de destino (1: America, 2: Europa, 3: Resto del Mundo )"))
+zona = int(input("Ingrese la zona de destino ( 1: America, 2: Europa, 3: Resto del Mundo) "))
 
 if zona == 1:
     precio_kilo = 5.0
