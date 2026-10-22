@@ -41,4 +41,12 @@ def my_first_template(request):
         "titulo": "TaskFlow",
         "mensaje": "Organiza tus proyectos y tareas en un solo lugar",
     }
-    return render(request, "tasks/my-first-template.html", contexto)
+    return render(request, "tasksks/my-first-template.html", contexto)
+
+def leads_like(request):
+    contexto = {
+        "titulo": "ESTUDIANTE",
+        "nombre": "Mateo Gabriel",
+        "apellido": "Araque Basantes"
+    }
+    return render(request, "leads/leads-like.html", contexto)
