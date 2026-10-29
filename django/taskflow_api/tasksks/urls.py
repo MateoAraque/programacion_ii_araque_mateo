@@ -4,18 +4,27 @@ from . import views
 app_name = "tasksks"   # namespace de la app — ver nota más abajo
 
 urlpatterns = [
-    path("", views.home, name="home"),
-    path("register", views.register,name="register"),
-    path("inicio", views.inicio,name="inicio"),
-    path("saludo/<str:nombre>/",
+     path("", views.home, name="home"),
+     path("register", views.register,name="register"),
+     path("inicio", views.inicio,name="inicio"),
+     path("saludo/<str:nombre>/",
          views.greeting, name="saludo"),
-    path("destino/<str:titulo>/<str:nombre>/<str:cargo>/",
+     path("destino/<str:titulo>/<str:nombre>/<str:cargo>/",
          views.destino, name="destino"),
-    path("my-first-template",
+     path("my-first-template",
          views.my_first_template,
          name="my-first-template"),
      path("leads-like",
          views.leads_like,
-         name="leads-like")
+         name="leads-like"),
+    path("projects", 
+          views.project_list, name="project-list"),
+
+     path("tasks/new/",
+           views.task_create, name="task_create"),
+     path("tasksks/<int:pk>/edit/", views.task_edit, name="task_edit"),
+
+     path("projects/new/",
+                views.project_create, name="task_create"),
 ]
 
