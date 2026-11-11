@@ -9,10 +9,10 @@ class Libroform(forms.ModelForm):
                   'fecha_publicacion',
                   'categoria',
                   'isbn']
-    widgets = {
-        'titulo': forms.TextInput(attrs={'class': 'form-control'}),
-        'autor': forms.TextInput(attrs={'class': 'form-control'}),
-        'fecha_publicacion': forms.DateInput(attrs={'class': 'form-control', 'type': 'date'}),
-        'categoria': forms.Select(attrs={'class': 'form-control'}),
-        'isbn': forms.TextInput(attrs={'class': 'form-control'}),
-    }
+        widgets = {
+            'titulo': forms.TextInput(attrs={'class': 'form-control'}),
+            'autor': forms.TextInput(attrs={'class': 'form-control'}),
+            'fecha_publicacion': forms.DateInput(attrs={'class': 'form-control', 'type': 'date'}),
+            'categoria': forms.Select(attrs={'class': 'form-control'}),
+            'isbn': forms.TextInput(attrs={'class': 'form-control'}),
+        }
