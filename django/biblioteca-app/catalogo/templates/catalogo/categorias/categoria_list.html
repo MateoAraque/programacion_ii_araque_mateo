@@ -16,6 +16,12 @@
         <a href="{% url 'categoria_create' %}">
             Nueva categoría
         </a>
+        <button>
+            <a href=" {% url 'home'%}"> Atrás</a>
+        </button>
+        <button>
+            <a href=" {% url 'libro_list'%}"> Lista de Libros</a>
+    </button>
     </p>
 
 
@@ -25,6 +31,7 @@
                 <th>ID</th>
                 <th>Nombre</th>
                 <th>Descripción</th>
+                <th>Acciones</th>
             </tr>
         </thead>
         <tbody>
@@ -33,10 +40,14 @@
                     <td>{{ categoria.id }}</td>
                     <td>{{ categoria.nombre }}</td>
                     <td>{{ categoria.descripcion }}</td>
+                    <td>
+                        <a href="{% url 'categoria_update' categoria.id %}">Editar</a>
+                        <a href="{% url 'categoria_delete' categoria.id %}">Eliminar</a>
+                    </td>
                 </tr>
             {% empty %}
                 <tr>
-                    <td colspan="3">
+                    <td colspan="4">
                         No existen categorías registradas.
                     </td>
                 </tr>
