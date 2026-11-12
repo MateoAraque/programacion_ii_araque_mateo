@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'catalogo/styles.css' %}?v=3">
+    <title>Crear Autor</title>
+</head>
+<body>
+    <h1>Biblioteca</h1>
+    <h2>Registrar Autor</h2>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <p>
+            <button type="submit">
+                Guardar Autor
+            </button>
+            <a href="{% url 'autor_list' %}">
+                Cancelar
+            </a>
+        </p>
+    </form>
+</body>
+</html>

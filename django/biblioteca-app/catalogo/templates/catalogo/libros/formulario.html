@@ -1,8 +1,10 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'catalogo/styles.css' %}?v=3">
     <title>
         {% if form.instance.pk%} 
             Editar Libro 
@@ -18,10 +20,10 @@
             Crear Libro
         {% endif %}
     </h1>
-    <form method="post">
-       	{% csrf_token %}
+    <form method="POST">
+        {% csrf_token %}
         {{ form.as_p }}
-       <button type="submit">Guardar</button>
+        <button type="submit">Guardar</button>
     </form>
 </body>
 </html>
