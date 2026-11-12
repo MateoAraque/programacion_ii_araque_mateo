@@ -1,8 +1,10 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'catalogo/styles.css' %}?v=3">
     <title>Lista De Libros</title>
 </head>
 <body>
@@ -38,7 +40,7 @@
             <label for="categoria">
                 Categoria
             </label>
-            <select name="categoria" id="categoria">
+            <select name="categoria_id" id="categoria_id">
                 <option value="">Todas las categorias</option>
                 {% for categoria in categorias %}
                 <option value="{{categoria.id}}"
@@ -49,7 +51,7 @@
                 {% endfor %}    
             </select>
         </p>
-
+        <button type="submit">Buscar</button>
     </form>
     <button>
         <a href=" {% url 'categoria_list' %}">Lista de Categorias</a>
